@@ -1,7 +1,6 @@
 import { getLetterMatchCount } from './'
 
 describe('getLetterMatchCount', () => {
-
   const secretWord = 'party'
 
   test('returns correct count when there are no matching letters', () => {
