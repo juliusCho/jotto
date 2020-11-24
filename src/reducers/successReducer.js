@@ -7,12 +7,16 @@ import { actionTypes } from '../actions'
  * @returns {boolean} - new success state.
  */
 export default (state = false, action) => {
-  if (!action) return false
+  // if (!action) return false
 
-  switch (action.type) {
-    case actionTypes.CORRECT_GUESS:
-      return true
-    default:
-      return false
+  if (!state && action) {
+    return action.type === actionTypes.CORRECT_GUESS
   }
+  return state
+  // switch (action.type) {
+  //   case actionTypes.CORRECT_GUESS:
+  //     return true
+  //   default:
+  //     return false
+  // }
 }
